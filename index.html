@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometri Kitapçığı Cevapları</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        main {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        form {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        input[type="number"] {
+            padding: 10px;
+            width: 150px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+        input[type="number"]:focus {
+            border-color: #aaa;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #cevaplar {
+            width: 100%;
+            max-width: 600px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>10. Sınıf ODF Orjinal Yayınları Geometri Kitapçığı Cevapları</h1>
+    </header>
+    <main>
+        <p>Cevabını istediğiniz sayfayı aşağıdaki alandan giriniz:</p>
+        <form>
+            <input type="number" min="1" max="100" placeholder="Sayfa Numarası">
+            <button type="button" onclick="goster()">Sayfayı Göster</button>
+        </form>
+        <div id="cevaplar"></div>
+    </main>
+    <script>
+        function goster() {
+            var cevaplarDiv = document.getElementById("cevaplar");
+            var value = document.querySelector("input[type='number']").value;
+            cevaplarDiv.innerHTML = `<img src="src/${value}.png" alt="Cevaplar">`;
+        }
+    </script>
+</body>
+</html>
+s
