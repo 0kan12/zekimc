@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotoğraf ve Ses Efekti</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        #photo {
+            max-width: 80%;
+            max-height: 80%;
+            transition: transform 1s ease;
+        }
+    </style>
+</head>
+<body>
+    <img id="photo" src="mc.png" alt="Fotoğraf">
+    <button id="playButton" style="display: none;">Sesi Çal</button>
+    <audio id="audio" src="ses.mp3" preload="auto" autoplay></audio>
+                     
+    <script>
+        document.addEventListener("click", function() {
+            var playButton = document.getElementById("playButton");
+            var audio = document.getElementById("audio");
+            var photo = document.getElementById("photo");
+            audio.play();
+            setTimeout(function() {
+                photo.style.transform = "scale(0)";
+            }, 2000);
+            playButton.style.display = "none";
+        });
+    </script>
+</body>
+</html>
